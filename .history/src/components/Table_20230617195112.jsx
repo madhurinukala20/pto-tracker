@@ -6,8 +6,8 @@ function Thead() {
       <tr>
         <th>S.No</th>
         <th>Name</th>
-        <th>Today Attendence</th>
-        <th>Requested PTO</th>
+        <th>Today's Attendence</th>
+        <th>Requested PTO’s</th>
         <th>Approval Status</th>
         <th>Approval Link</th>
       </tr>

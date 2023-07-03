@@ -1,6 +1,6 @@
 function Logo() {
     return (
-        <span className="logo__container">PTO Tracker</span>
+        <a className="logo__container">PTO Tracker</a>
     );
   }
   
