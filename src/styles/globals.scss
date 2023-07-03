@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.link,
+a {
+  border-bottom: 2px solid;
+  text-decoration: none;
+  color: #4285f4;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 2px solid;
+  }
+}
+
+span {
+  color: #000;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0px 32px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.header__container {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 0;
+
+  .header__container-column {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__container-menu {
+    display: flex;
+
+    a {
+      border-width: 0;
+      color: #000;
+
+      &:hover {
+        border-width: 2px;
+      }
+    }
+  }
+}
+
+.logo__container {
+  border: 0;
+  color: #000;
+  font-weight: 900;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-right: 32px;
+
+  &:hover {
+    border: 0;
+  }
+}
+
+.main__container {
+  padding: 32px 0;
+}
+
+.form {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 0;
+}
+.form__container {
+  &.form__container--login,
+  &.form__container--register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: flex-end;
+    background-size: cover;
+    background-image: url('https://www.softwaresuggest.com/blog/wp-content/uploads/2019/03/attandance-management-FB.png');
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(0px);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .form__container-box {
+      width: 450px;
+      height: 100vh;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 64px;
+      background: #fff;
+      position: relative;
+      z-index: 999;
+    }
+
+    .form__field--error {
+      font-size: 12px;
+      color: #f00;
+      line-height: 16px;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .logo__container {
+      margin-bottom: 32px;
+      font-size: 24px;
+    }
+
+    .button {
+      margin-top: 16px;
+    }
+  }
+
+  p {
+    display: flex;
+    justify-content: flex-end;
+    span {
+      border-bottom: 2px solid #db4437;
+      color: #db4437;
+      cursor: pointer;
+    }
+  }
+}
+
+.form__field {
+  margin-bottom: 16px;
+  width: 100%;
+
+  .form__field--label {
+    display: block;
+  }
+  .form__field--input {
+    border: 1px solid #cbcbcb;
+    border-radius: 4px;
+    padding: 12px 8px;
+    width: 100%;
+  }
+}
+
+.form__field--toggle {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  height: 35px;
+  cursor: pointer;
+
+  &.form__field--toggle-present {
+    background-image: url('../../public/green.jpg');
+  }
+  &.form__field--toggle-absent {
+    background-image: url('../../public/red.jpeg');
+  }
+}
+
+.pto-pending {
+  color: orange;
+}
+
+.pto-approved {
+  color: green;
+}
+
+.error__container {
+  background-color: #f00;
+  border: 1px solid #f00;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 16px;
+  padding: 6px 16px;
+}
+
+.button {
+  background-color: #4285f4;
+  border: 1px solid #4285f4;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  padding: 12px 24px;
+
+  &.button--full {
+    width: 100%;
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: #9ac0ff;
+    border: 1px solid #9ac0ff;
+    cursor: not-allowed;
+  }
+}
+
+.footer__container {
+  padding: 16px 0;
+}
+
+.header__container--user {
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    border-radius: 4px;
+    display: block;
+    position: relative;
+  }
+  a,
+  span {
+    border: 0;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    padding: 4px 16px;
+    &:hover {
+      background-color: #f0f0f0;
+      border: 0;
+    }
+  }
+
+  .profile-name {
+    font-size: 28px;
+    background: #000;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+
+  .user__dropdown {
+    ul {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #f0f0f0;
+      border-radius: 4px;
+      right: 0;
+      padding: 8px;
+      min-width: 160px;
+    }
+
+    li:hover {
+      ul {
+        display: block;
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  margin: 32px 0px;
+  background-color: transparent;
+
+  th {
+    border-bottom: 2px solid #dee2e6;
+  }
+
+  td,
+  th {
+    text-align: left;
+    padding: 8px;
+    border-top: 1px solid #dee2e6;
+  }
+}
+
+.modal {
+  display: none;
+
+  &.modal--active {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal__title {
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .modal__body {
+    padding: 16px;
+  }
+
+  .modal__container {
+    background: #fff;
+    width: 400px;
+    margin: auto;
+    border-radius: 8px;
+  }
+
+  .close__modal {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 50%;
+  }
+}
+
+.copyright {
+  font-size: 14px;
+}
